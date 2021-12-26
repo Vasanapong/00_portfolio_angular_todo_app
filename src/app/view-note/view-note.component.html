@@ -1,0 +1,18 @@
+<div class="view-note">
+    <div class="view-note__header">
+        <button (click)="handleViewMode()">Add Note</button>
+        <span>All Things todo ...</span>
+    </div>
+    <div *ngFor="let item of allNote.reverse()">
+        <div class="view-note__item">
+            <div class="view-note__preview">
+                <p class="view-note__preview-title">Title : {{item.title}}</p>
+                <p>Note : {{item.note}}</p>
+            </div>
+            <div class="view-note__menu">
+                <button (click)="handleEdit(item)">edit</button>
+                <button (click)="handleDelete(item)">delete</button>
+            </div>
+        </div>
+    </div>
+</div>

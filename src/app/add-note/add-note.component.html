@@ -1,0 +1,30 @@
+<div class="add-note">
+    <form class="add-note__form">
+        <div class="add-note__header">
+            <button (click)="handleViewMode()">View Note</button>
+            <span>Add New Note...</span>
+        </div>
+        <div class="add-note__title">
+            <label>Title</label><br>
+            <input 
+            type="text"
+            name="inputTitle"
+            #inputTitle
+            (keyup)="handleNoteChange(inputTitle)"
+            [value]="noteData.title"
+            >
+        </div>
+        <div class="add-note__note">
+            <label>Note</label><br>
+            <textarea 
+            name="inputNote"
+            #inputNote
+            (keyup)="handleNoteChange(inputNote)"
+            [value]="noteData.note"   
+            ></textarea>
+        </div>
+        <div class="add-note__submit">
+            <input type="submit" value="Add Note" (click)="handleSubmit($event)">
+        </div>
+    </form>
+</div>

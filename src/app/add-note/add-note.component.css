@@ -1,0 +1,74 @@
+.add-note{
+    margin-top: 20px;
+    /* border: 1px solid white; */
+    width: 50vw;
+    min-width: 280px;
+    max-width: 800px;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+}
+
+.add-note__form{
+    width: 100%;
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-note__form > div{
+    /* border: 1px solid white; */
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.add-note__header{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    position: relative;
+}
+
+.add-note__header > button{
+    width: 50px !important;
+    height: 40px !important;
+    border: 1px solid white;
+    background: none;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0%,-50%);
+    font-weight: 500;
+}
+
+.add-note__form > div > input{
+    width: 100%;
+    outline: none;
+    padding: 10px;
+}
+
+.add-note__form > div > textarea{
+    width: 100%;
+    height: 200px;
+    resize: none;
+    outline: none;
+    padding: 10px;
+}
+
+.add-note__submit > input{
+    width: 100px !important;
+    border: 1px solid white;
+    background: none;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+    bottom: 10px;
+}

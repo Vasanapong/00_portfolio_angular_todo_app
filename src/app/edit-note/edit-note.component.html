@@ -1,0 +1,30 @@
+<div class="edit-note">
+    <form class="edit-note__form">
+        <div class="edit-note__header">
+            <button (click)="handleViewMode()">View Note</button>
+            <span>Edit Note...</span>
+        </div>
+        <div class="edit-note__title">
+            <label>Title</label><br>
+            <input 
+            type="text"
+            name="inputTitle"
+            #inputTitle
+            (keyup)="handleEditNoteChange(inputTitle)"
+            [value]="editNote.title"
+            >
+        </div>
+        <div class="edit-note__note">
+            <label>Note</label><br>
+            <textarea 
+            name="inputNote"
+            #inputNote
+            (keyup)="handleEditNoteChange(inputNote)"
+            [value]="editNote.note"   
+            ></textarea>
+        </div>
+        <div class="edit-note__submit">
+            <input type="submit" value="Edit Note" (click)="handleEditSubmit($event)">
+        </div>
+    </form>
+</div>
